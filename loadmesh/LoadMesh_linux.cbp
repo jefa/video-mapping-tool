@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LoadMesh" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\$(PROJECT_NAME)_DEBUG" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\release" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fpermissive" />
+			<Add directory="/home/jefa/libs/vcglib/" />
+			<Add directory="/home/jefa/libs/meshlab\src\external\lib3ds-1.3.0" />
+			<Add directory="/usr/include/qt4/" />
+			<Add directory="/usr/include/qt4/QtGui" />
+			<Add directory="/usr/include/qt4/QtCore" />
+		</Compiler>
+		<Linker>
+			<Add option="-fpermissive" />
+			<Add library="/usr/lib/libQtGui.so.4" />
+			<Add library="/usr/lib/libQtCore.so.4" />
+			<Add directory="/home/jefa/libs/vcglib/vcg" />
+			<Add directory="/home/jefa/libs/meshlab\src\external\lib3ds-1.3.0" />
+		</Linker>
+		<Unit filename="src\ProcessMesh.cpp" />
+		<Unit filename="src\ProcessMesh.h" />
+		<Unit filename="src\main.cpp" />
+		<Unit filename="src\meshmodel.h" />
+		<Unit filename="src\moc_processdialog.cpp" />
+		<Unit filename="src\poisson\Allocator.h" />
+		<Unit filename="src\poisson\BinaryNode.h" />
+		<Unit filename="src\poisson\Factor.cpp" />
+		<Unit filename="src\poisson\Factor.h" />
+		<Unit filename="src\poisson\FunctionData.h" />
+		<Unit filename="src\poisson\Geometry.cpp" />
+		<Unit filename="src\poisson\Geometry.h" />
+		<Unit filename="src\poisson\Hash.h" />
+		<Unit filename="src\poisson\MarchingCubes.cpp" />
+		<Unit filename="src\poisson\MarchingCubes.h" />
+		<Unit filename="src\poisson\MultiGridOctest.cpp" />
+		<Unit filename="src\poisson\MultiGridOctreeData.h" />
+		<Unit filename="src\poisson\Octree.h" />
+		<Unit filename="src\poisson\PPolynomial.h" />
+		<Unit filename="src\poisson\PoissonParam.h" />
+		<Unit filename="src\poisson\Polynomial.h" />
+		<Unit filename="src\poisson\SparseMatrix.h" />
+		<Unit filename="src\poisson\Vector.h" />
+		<Unit filename="src\processdialog.cpp" />
+		<Unit filename="src\processdialog.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

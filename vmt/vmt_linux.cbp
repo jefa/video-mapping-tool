@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vmt" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons\;addons\ofxOsc\src\;common\;addons\ofxXmlSettings\;addons\ofxXmlSettings\src\;addons\ofxXmlSettings\libs\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\$(PROJECT_NAME)_DEBUG" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="../of_preRelease_v0061_linux_FAT/libs/openFrameworksCompiled/lib/linux/libopenFrameworksDebug.a" />
+					<Add option="../vmt_engine/lib/vmt_engine_dbg.lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="../of_preRelease_v0061_linux_FAT/libs/openFrameworksCompiled/lib/linux/libopenFrameworks.a" />
+					<Add option="../vmt_engine/lib/vmt_engine.lib" />
+				</Linker>
+			</Target>
+			<Environment>
+				<Variable name="OF_BASE_DIR" value="../of_preRelease_v0061_linux_FAT" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions -Wno-multichar -Werror=return-type `pkg-config gstreamer-0.10 --cflags`" />
+			<Add directory="../of_preRelease_v0061_linux_FAT/addons/"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/events"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/app"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/communication"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/graphics"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/video"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/utils"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworks/sound"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/rtAudio"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/fmodex/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/glee/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/FreeImage/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/freetype/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/freetype/include/freetype2"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/unicap/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/gstappsink/include"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/poco/include"/>
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofx3DModelLoader\src\3DS\" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofx3DModelLoader\src\" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\libs\oscpack\include\ip" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\libs\oscpack\include\osc" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\src" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\libs" />
+			<Add directory="..\of_preRelease_v0061_linux_FAT\addons\ofxVectorMath\src" />
+			<Add directory="..\vmt_engine\include" />
+			<Add directory="include" />
+			<Add directory="..\common" />
+			<Add directory="/usr/include/qt4/" />
+			<Add directory="/usr/include/qt4/QtGui" />
+			<Add directory="/usr/include/qt4/QtCore" />
+		</Compiler>
+		<Linker>
+			<Add library="openFrameworks"/>
+			<Add library="fmodex"/>
+			<Add library="raw1394"/>
+			<Add library="glut"/>
+			<Add library="GL"/>
+			<Add library="GLU"/>
+			<Add library="Xxf86vm"/>
+			<Add library="asound"/>
+			<Add library="PocoFoundation"/>
+			<Add library="unicap"/>
+			<Add library="freetype"/>
+			<Add library="freeimage"/>
+			<Add library="RtAudio"/>
+			<Add library="GLee"/>
+			<Add library="oFappsink"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/openFrameworksCompiled/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/freetype/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/FreeImage/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/rtAudio/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/glee/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/gstappsink/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/fmodex/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/unicap/lib/linux"/>
+			<Add directory="../of_preRelease_v0061_linux_FAT/libs/poco/lib/linux"/>
+			<Add library="../of_preRelease_v0061_linux_FAT/addons\ofxOsc\libs\oscpack\lib\linux/liboscpack.a" />
+			<Add option="`pkg-config gstreamer-0.10 gstreamer-video-0.10 gstreamer-base-0.10 libudev libavcodec libavformat libavutil --libs`" />
+			<Add library="/usr/lib/libQtGui.so.4" />
+			<Add library="/usr/lib/libQtCore.so.4" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="#"/>
+			<Add after="#      copy libs and shell script to bin directory:"/>
+			<Add after="#"/>
+			<Add after="cp -r ../of_preRelease_v0061_linux_FAT/export/linux/libs $(PROJECT_DIR)bin/"/>
+			<Add after="cp ../of_preRelease_v0061_linux_FAT/export/linux/clickToLaunchApp.sh $(PROJECT_DIR)bin/clickToLaunchApp_$(TARGET_NAME).sh"/>
+			<Add after="sed -i s/applicationName/$(TARGET_OUTPUT_BASENAME)/g  $(PROJECT_DIR)bin/clickToLaunchApp_$(TARGET_NAME).sh"/>
+			<Add after="#"/>
+			<Add after="#    this is a shell script that can either (a) run the app or (b) launch nautilus to a good directory for you to run the app"/>
+			<Add after="#"/>
+			<!--Add after="./cb_build_runner.sh $(TARGET_OUTPUT_BASENAME) $runOnBuild $nautilusOnBuild"/-->
+			<Add after="#"/>
+			<Add after="#     to enable either, change the custom variables in project->build options->custom variables"/>
+			<Add after="#     to true / false."/>
+			<Add after="#"/>
+			<Add after="#     currently this is disabled, but allows you to run the app from w/in CB."/>
+			<Add after="#"/>
+			<Mode after="always"/>
+		</ExtraCommands>
+		<Unit filename="..\common\FileUtil.cpp">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\FileUtil.h">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\ISceneHandler.h">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\OscUtil.cpp">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\OscUtil.h">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\base64.cpp">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\common\base64.h">
+			<Option virtualFolder="common" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOsc.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscArg.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscBundle.cpp">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscBundle.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscMessage.cpp">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscMessage.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscReceiver.cpp">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscReceiver.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscSender.cpp">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxOsc\src\ofxOscSender.h">
+			<Option virtualFolder="addons\ofxOsc\src" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\libs\tinyxml.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\libs\" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\libs\tinyxml.h">
+			<Option virtualFolder="addons\ofxXmlSettings\libs\" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\libs\" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\libs\" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\src\" />
+		</Unit>
+		<Unit filename="..\of_preRelease_v0061_linux_FAT\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+			<Option virtualFolder="addons\ofxXmlSettings\src\" />
+		</Unit>
+		<Unit filename="include\KeyEventsManager.h" />
+		<Unit filename="include\OscManager.h" />
+		<Unit filename="include\TimeManager.h" />
+		<Unit filename="include\backgraundeditdialog.h" />
+		<Unit filename="include\calibratedialog.h" />
+		<Unit filename="include\cameraeditdialog.h" />
+		<Unit filename="include\colorlisteditor.h" />
+		<Unit filename="include\effecteditdialog.h" />
+		<Unit filename="include\effectitem.h" />
+		<Unit filename="include\effectpages.h" />
+		<Unit filename="include\effectslistmodel.h" />
+		<Unit filename="include\effectslistwindow.h" />
+		<Unit filename="include\evteffecteditdialog.h" />
+		<Unit filename="include\evteffectitem.h" />
+		<Unit filename="include\evteffectslistmodel.h" />
+		<Unit filename="include\evteffectslistwindow.h" />
+		<Unit filename="include\keyeffecteditdialog.h" />
+		<Unit filename="include\keyeffectitem.h" />
+		<Unit filename="include\keyeffectslistmodel.h" />
+		<Unit filename="include\keyeffectslistwindow.h" />
+		<Unit filename="include\layereditdialog.h" />
+		<Unit filename="include\lighteditdialog.h" />
+		<Unit filename="include\nodeeditdialog.h" />
+		<Unit filename="include\objecteditdialog.h" />
+		<Unit filename="include\quadeditdialog.h" />
+		<Unit filename="include\timeline.h" />
+		<Unit filename="include\treeitem.h" />
+		<Unit filename="include\treemodel.h" />
+		<Unit filename="include\treewindow.h" />
+		<Unit filename="include\uiutils.h" />
+		<Unit filename="include\vmt.h" />
+		<Unit filename="include\vmtmodel.h" />
+		<Unit filename="src\KeyEventsManager.cpp" />
+		<Unit filename="src\OscManager.cpp" />
+		<Unit filename="src\TimeManager.cpp" />
+		<Unit filename="src\backgraundeditdialog.cpp" />
+		<Unit filename="src\calibratedialog.cpp" />
+		<Unit filename="src\cameraeditdialog.cpp" />
+		<Unit filename="src\colorlisteditor.cpp" />
+		<Unit filename="src\effecteditdialog.cpp" />
+		<Unit filename="src\effectitem.cpp" />
+		<Unit filename="src\effectpages.cpp" />
+		<Unit filename="src\effectslistmodel.cpp" />
+		<Unit filename="src\effectslistwindow.cpp" />
+		<Unit filename="src\evteffecteditdialog.cpp" />
+		<Unit filename="src\evteffectitem.cpp" />
+		<Unit filename="src\evteffectslistmodel.cpp" />
+		<Unit filename="src\evteffectslistwindow.cpp" />
+		<Unit filename="src\keyeffecteditdialog.cpp" />
+		<Unit filename="src\keyeffectitem.cpp" />
+		<Unit filename="src\keyeffectslistmodel.cpp" />
+		<Unit filename="src\keyeffectslistwindow.cpp" />
+		<Unit filename="src\layereditdialog.cpp" />
+		<Unit filename="src\lighteditdialog.cpp" />
+		<Unit filename="src\main.cpp" />
+		<Unit filename="src\moc_backgraundeditdialog.cpp" />
+		<Unit filename="src\moc_calibratedialog.cpp" />
+		<Unit filename="src\moc_cameraeditdialog.cpp" />
+		<Unit filename="src\moc_colorlisteditor.cpp" />
+		<Unit filename="src\moc_effecteditdialog.cpp" />
+		<Unit filename="src\moc_effectpages.cpp" />
+		<Unit filename="src\moc_effectslistmodel.cpp" />
+		<Unit filename="src\moc_effectslistwindow.cpp" />
+		<Unit filename="src\moc_evteffecteditdialog.cpp" />
+		<Unit filename="src\moc_evteffectslistmodel.cpp" />
+		<Unit filename="src\moc_evteffectslistwindow.cpp" />
+		<Unit filename="src\moc_keyeffecteditdialog.cpp" />
+		<Unit filename="src\moc_keyeffectslistmodel.cpp" />
+		<Unit filename="src\moc_keyeffectslistwindow.cpp" />
+		<Unit filename="src\moc_layereditdialog.cpp" />
+		<Unit filename="src\moc_lighteditdialog.cpp" />
+		<Unit filename="src\moc_nodeeditdialog.cpp" />
+		<Unit filename="src\moc_objecteditdialog.cpp" />
+		<Unit filename="src\moc_quadeditdialog.cpp" />
+		<Unit filename="src\moc_timeline.cpp" />
+		<Unit filename="src\moc_treemodel.cpp" />
+		<Unit filename="src\moc_treewindow.cpp" />
+		<Unit filename="src\nodeeditdialog.cpp" />
+		<Unit filename="src\objecteditdialog.cpp" />
+		<Unit filename="src\quadeditdialog.cpp" />
+		<Unit filename="src\timeline.cpp" />
+		<Unit filename="src\treeitem.cpp" />
+		<Unit filename="src\treemodel.cpp" />
+		<Unit filename="src\treewindow.cpp" />
+		<Unit filename="src\uiutils.cpp" />
+		<Unit filename="src\vmt.cpp" />
+		<Unit filename="src\vmtmodel.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

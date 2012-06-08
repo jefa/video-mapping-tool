@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="../vmt_engine/vmt_engine.cbp" />
+		<Project filename="vmt.cbp" active="1">
+			<Depends filename="../vmt_engine/vmt_engine.cbp" />
+		</Project>
+		<Project filename="../vmt_node/vmt_node.cbp">
+			<Depends filename="../vmt_engine/vmt_engine.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>

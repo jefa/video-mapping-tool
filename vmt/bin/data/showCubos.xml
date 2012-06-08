@@ -1,0 +1,62 @@
+<vmtshow name="showname1">
+    <network>
+        <node id="node1" address="localhost" port="54321" isActive="true" cameraId="cam2"></node>
+    </network>
+    <scene backgroundcolor="0.6 1 1">
+        <cameras>
+            <camera id="cam1" projector="false">
+                <view pos="0 0 0" eye="1 0 0" up="0 1 0"></view>
+                <projection fov="65" aspect="1.33333" resx="800" resy="600"></projection>
+                <layers>
+                    <layer id="layer2">
+                        <quad id="q3" enabled="true" p0="30 30" p1="30 40" p2="50 40" p3="50 30"></quad>
+                    </layer>
+                </layers>
+            </camera>
+            <camera id="cam2" projector="true">
+                <view pos="0 0 -30" eye="0 0 0" up="0 1 0"></view>
+                <projection fov="65" aspect="1.33333" resx="1024" resy="768"></projection>
+                <layers>
+                    <layer id="layer1">
+                        <quad id="quad1" enabled="true" p0="100 100" p1="300 100" p2="300 300" p3="100 300"></quad>
+                        <quad id="quad2" enabled="true" p0="10 10" p1="10 20" p2="30 20" p3="30 10"></quad>
+                    </layer>
+                </layers>
+            </camera>
+        </cameras>
+        <lights>
+            <light id="light1" specular="255 255 255" diffuse="255 0 0" direction="0.5 -0.2 0.5"></light>
+            <light id="light2" specular="255 255 255" diffuse="255 0 0" direction="-0.5 -0.2 0.5"></light>
+            <light id="light3" specular="255 255 255" diffuse="255 0 0" direction="-0.5 -0.2 -0.5"></light>
+            <light id="light4" specular="255 255 255" diffuse="255 0 0" direction="0.5 -0.2 -0.5"></light>
+        </lights>
+        <groups>
+            <group id="group1">
+                <quad id="quad1"></quad>
+                <quad id="quad2"></quad>
+            </group>
+        </groups>
+        <objects3d>
+            <object3d id="cubos" filename="data/cubos.3DS" pos="0 0 0" scale="1 1 1"></object3d>
+        </objects3d>
+        <effects>
+            <effect id="ef1" type="position" objid="cubos" pos1="0 3 0" pos2="0 -3 0" delay="0.5"></effect>
+            <effect id="ef2" type="position" objid="cubos" pos1="3 0 0" pos2="-3 0 0" delay="0.5"></effect>
+            <effect id="ef3" type="position" objid="cubos" pos1="0 0 3" pos2="0 0 -3" delay="0.5"></effect>
+            <effect id="ef4" type="fade" groupid="group1" col1="0 0 0 0" col2="1 1 1 1" delay="0.5"></effect>
+            <effect id="ef5" type="grouptexture" groupid="group1" texturename="data/videos/cubo_azul.mov" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="ef6" type="object3dtexture" objid="cubos" texturename="data/videos/cubo_azul.mov" texturetype="VIDEO_TEXTURE" facesid="cubo1"></effect>
+            <effect id="ef7" type="object3dtexture" objid="cubos" texturename="data/videos/particulas2.mov" texturetype="VIDEO_TEXTURE" facesid="cubo2"></effect>
+            <effect id="ef8" type="object3dtexture" objid="cubos" texturename="data/videos/static.mov" texturetype="VIDEO_TEXTURE" facesid="cubo3"></effect>
+        </effects>
+    </scene>
+    <timedevents>
+        <timedevent t="1" effect="ef1"></timedevent>
+        <timedevent t="2" effect="ef2"></timedevent>
+        <timedevent t="3.2" effect="ef3"></timedevent>
+    </timedevents>
+    <keyevents>
+        <keyevent key="97" effect="ef1"></keyevent>
+        <keyevent key="115" effect="ef2"></keyevent>
+    </keyevents>
+</vmtshow>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vmt_engine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="lib\vmt_engine_dbg.lib" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj\Debug\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="lib\vmt_engine.lib" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-Wno-multichar -Werror=return-type" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\3d" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\app" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\communication" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\events" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\gl" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\graphics" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\math" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\sound" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\types" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\utils" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\openFrameworks\video" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\cairo\include\cairo" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\fmodex\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\FreeImage\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\freetype\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\freetype\include\freetype2" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\glew\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\glu\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\glut\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\poco\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\quicktime\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\rtAudio\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\tess2\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\libs\videoInput\include" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\ofxOsc\src\" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\ofxOsc\libs\oscpack\include\ip" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\ofxOsc\libs\oscpack\include\osc" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\ofxXmlSettings\src" />
+			<Add directory="..\of_preRelease_v007_win_cb\addons\ofxXmlSettings\libs" />
+			<Add directory="addons\ofxConsole\src" />
+			<Add directory="addons\ofxMidiIn\src" />
+			<Add directory="addons\ofxMidiIn\events" />
+			<Add directory="addons\ofxMidiIn\libs" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="addons\ofxAlphaVideoPlayer\ofxAlphaVideoPlayer.cpp" />
+		<Unit filename="addons\ofxAlphaVideoPlayer\ofxAlphaVideoPlayer.h" />
+		<Unit filename="addons\ofxAlphaVideoPlayer\ofxQtUtils_alpha.cpp" />
+		<Unit filename="addons\ofxAlphaVideoPlayer\ofxQtUtils_alpha.h" />
+		<Unit filename="addons\ofxMidiIn\events\ofxMidiEvents.h" />
+		<Unit filename="include\Animation.h" />
+		<Unit filename="include\AnimationManager.h" />
+		<Unit filename="include\Effect.h" />
+		<Unit filename="include\FadeEffect.h" />
+		<Unit filename="include\IPropertyManager.h" />
+		<Unit filename="include\ISerializable.h" />
+		<Unit filename="include\Layer2D.h" />
+		<Unit filename="include\LinearAnimation.h" />
+		<Unit filename="include\Material.h" />
+		<Unit filename="include\Object3D.h" />
+		<Unit filename="include\PositionEffect.h" />
+		<Unit filename="include\Quad2D.h" />
+		<Unit filename="include\QuadGroup.h" />
+		<Unit filename="include\Scene.h" />
+		<Unit filename="include\SerializedNode.h" />
+		<Unit filename="include\TextureEffect.h" />
+		<Unit filename="include\TextureManager.h" />
+		<Unit filename="include\homography.h" />
+		<Unit filename="include\model3DS.h" />
+		<Unit filename="include\ofxCamera.h" />
+		<Unit filename="include\ofxLight.h" />
+		<Unit filename="include\texture3DS.h" />
+		<Unit filename="src\Animation.cpp" />
+		<Unit filename="src\AnimationManager.cpp" />
+		<Unit filename="src\Effect.cpp" />
+		<Unit filename="src\FadeEffect.cpp" />
+		<Unit filename="src\Layer2D.cpp" />
+		<Unit filename="src\LinearAnimation.cpp" />
+		<Unit filename="src\Material.cpp" />
+		<Unit filename="src\Object3D.cpp" />
+		<Unit filename="src\PositionEffect.cpp" />
+		<Unit filename="src\Quad2D.cpp" />
+		<Unit filename="src\QuadGroup.cpp" />
+		<Unit filename="src\Scene.cpp" />
+		<Unit filename="src\SerializedNode.cpp" />
+		<Unit filename="src\TextureEffect.cpp" />
+		<Unit filename="src\TextureManager.cpp" />
+		<Unit filename="src\model3DS.cpp" />
+		<Unit filename="src\ofxCamera.cpp" />
+		<Unit filename="src\ofxLight.cpp" />
+		<Unit filename="src\texture3DS.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
