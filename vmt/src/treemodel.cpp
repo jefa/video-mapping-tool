@@ -117,7 +117,7 @@ string TreeModel::ObtType(const QModelIndex &index)
                 {
                 case 0:TypeNodo = "CAMERAS";		 break;
                 case 1:TypeNodo = "OBJECTS";		 break;
-                case 2:TypeNodo = "LIGHTS";		     break;
+                case 2:TypeNodo = "GROUPS";		     break;
                 case 3:TypeNodo = "NODES";		     break;
                 case 4:TypeNodo = "BACKGRAUND";		 break;
 
@@ -133,7 +133,7 @@ string TreeModel::ObtType(const QModelIndex &index)
                 case 1:TypeNodo = "LAYER";		 break;
                 case 2:TypeNodo = "QUAD";		 break;
                 case 3:TypeNodo = "OBJECT";		 break;
-                case 4:TypeNodo = "LIGHT";		 break;
+                case 4:TypeNodo = "GROUP";		 break;
                 case 5:TypeNodo = "NODE";		 break;
 
                 }
@@ -153,7 +153,7 @@ string TreeModel::ObtType(const QModelIndex &index)
     string TypeNodo;
     TypeNodo = ObtType(index);
     //cout << " TypeNodo: "<< TypeNodo;
-    //cout<<" nombre nuevo: "<<Name;
+    //cout<<" nombre nue1vo: "<<Name;
     beginInsertRows(parent, position, position + rows - 1);
     if (TypeNodo == "NODES" ){
         // add  Node
@@ -185,6 +185,15 @@ string TreeModel::ObtType(const QModelIndex &index)
         success = currentItem->insertChildren(position, rows, lightItem,Name);
 
     }
+    if (TypeNodo == "GROUPS" ){
+        // add  GROUP
+        this->vmtModel->addGroup(Name);
+        QuadGroup *newGroup = this->vmtModel->getGroup(Name);
+        GroupItemData *groupItem = new GroupItemData(newGroup);
+
+        success = currentItem->insertChildren(position, rows, groupItem,Name);
+
+    }
     if (TypeNodo == "OBJECTS" || TypeNodo == "OBJECT" ){
         // add  Object
 
@@ -195,6 +204,7 @@ string TreeModel::ObtType(const QModelIndex &index)
         ObjectItemData *objectItem = new ObjectItemData(newObject);
 
         success = currentItem->insertChildren(position, rows, objectItem,Name);
+
     }
     if (TypeNodo == "CAMERA"){
         // add a Layer
@@ -395,7 +405,7 @@ void TreeModel::setupSceneModelData()
     rootItem = new TreeItem(NULL, NULL, "Scene");
     rootItem->insertChildren(0, 1, NULL, "CAMERAS");
     rootItem->insertChildren(1, 1, NULL, "OBJECTS");
-    rootItem->insertChildren(2, 1, NULL, "LIGHTS");
+    rootItem->insertChildren(2, 1, NULL, "GROUPS");
     rootItem->insertChildren(3, 1, NULL, "NODES");
     rootItem->insertChildren(4, 1, NULL, "Background");
 
@@ -455,10 +465,16 @@ bool TreeModel::addObject3D(int position, int rows, const QModelIndex &index, st
     TreeItem *parentItem = getItem(index.parent());
     TreeItem *currentItem = getItem(index);
 
+    beginInsertRows(index.parent(), position, position + rows - 1);
+
     this->vmtModel->addObject3D(name, path);
     Object3D *newObject = this->vmtModel->getObject3D(name);
     ObjectItemData *objectItem = new ObjectItemData(newObject);
-    return currentItem->insertChildren(position, rows, objectItem, name);
+    bool success = currentItem->insertChildren(position, rows, objectItem, name);
+
+    endInsertRows();
+
+    return success;
 }
 
 VmtModel * TreeModel::getVmtModel(){

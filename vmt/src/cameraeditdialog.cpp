@@ -181,7 +181,7 @@ void CameraEditorDialog::loadData(){
         previouszNear = camera->getzNear();
         zNear->setValue(previouszNear);
 
-        }
+    }
 
 }
 

@@ -75,13 +75,14 @@ bool TreeItem::insertChildren(int position, int count, /*int columns*/TreeItemDa
     if (position < 0 || position > childItems.size())
         return false;
 
-    for (int row = 0; row < count; ++row) {
+    //for (int row = 0; row < count; ++row) {
         //QVector<QVariant> data(columns);
         TreeItem *item = new TreeItem(itemData, this, label);
 
         if (item  != NULL)
-            childItems.insert(position, item);
-    }
+            childItems.append(item);
+            //childItems.insert(position, item);
+    //}
 
     return true;
 }
@@ -342,3 +343,28 @@ bool NodeItemData::setSeleted(Scene *scene){
     //scene->activateObject(this->object3d->getId());
     return true;
 }
+
+GroupItemData::GroupItemData(QuadGroup *groupobj){
+    this->itemId = 4;
+    this->group = groupobj;
+}
+
+GroupItemData::~GroupItemData(){
+}
+
+QVariant GroupItemData::getData(int column){
+    if (column == 0){
+
+    }
+
+    return QVariant(QString("no data"));
+}
+
+void GroupItemData::setData(int column, QVariant colValue){
+
+}
+bool GroupItemData::setSeleted(Scene *scene){
+
+    return true;
+}
+

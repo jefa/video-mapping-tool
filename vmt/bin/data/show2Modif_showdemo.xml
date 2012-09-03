@@ -1,0 +1,94 @@
+<vmtshow name="showname1">
+    <network>
+        <node id="node1" address="localhost" port="54321" isActive="true" cameraId="camara"></node>
+    </network>
+    <scene backgroundcolor="0 0 0">
+        <cameras>
+            <camera id="camara" projector="false">
+                <view pos="-779.618 456.885 1059.19" eye="-243.96 111.648 72.3353" up="0 1 0"></view>
+                <projection fov="27" aspect="1.33333" resx="1024" resy="768"></projection>
+                <layers>
+                    <layer id="layer">
+                        <quad id="quad" enabled="true" p0="544 452.5" p1="573 573" p2="758 561" p3="660.5 428"></quad>
+                    </layer>
+                </layers>
+            </camera>
+        </cameras>
+        <lights></lights>
+        <groups>
+            <group id="group">
+                <quad id="quad"></quad>
+            </group>
+        </groups>
+        <objects3d>
+            <object3d id="cilindro" filename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/cilindro.3DS" pos="-353.5 50.5 -41" scale="1 1 1"></object3d>
+            <object3d id="cubos" filename="data/cubo.3DS" pos="0 0 0" scale="1 1 1"></object3d>
+        </objects3d>
+        <effects>
+            <effect id="CilindroScan" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/scan.mov" facesid="01 - Default" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="GridCilindro" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/grid.mov" facesid="01 - Default" texturetype="VIDEO_TEXTURE"></effect>
+			<effect id="FireCilindro" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/fire.mov" facesid="01 - Default" texturetype="VIDEO_TEXTURE"></effect>
+			
+			<effect id="BlueCilindro" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/blue.mov" facesid="01 - Default" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="NegroC1" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/negro.png" facesid="c1" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="NegroC2" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/negro.png" facesid="c2" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="NegroC3" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/negro.png" facesid="c3" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="NegroCilindro" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/negro.png" facesid="01 - Default" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="checkerc2" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/color checker chart.png" facesid="c2" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="cilindro" type="object3dtexture" objid="cilindro" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/images/color checker chart.png" facesid="01 - Default" texturetype="IMAGE_TEXTURE"></effect>
+            <effect id="grid1" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/grid.mov" facesid="c1" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="grid2" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/grid.mov" facesid="c2" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="grid3" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/grid.mov" facesid="c3" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="gusanoc1" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/out.mov" facesid="c1" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="gusanoc2" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/out.mov" facesid="c2" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="gusanoc3" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/out.mov" facesid="c3" texturetype="VIDEO_TEXTURE"></effect>
+            <effect id="particlec1" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/particulas2.mov" facesid="c1" texturetype="VIDEO_TEXTURE"></effect>
+			<effect id="Space1" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/space.mov" facesid="c1" texturetype="VIDEO_TEXTURE"></effect>            
+            <effect id="posto-10" type="position" objid="cubos" pos1="0 0 0" pos2="-10 -10 -10" delay="0"></effect>
+            <effect id="posto-500" type="position" objid="cubos" pos1="0 0 0" pos2="0 0 -500" delay="0"></effect>
+            <effect id="posto0" type="position" objid="cubos" pos1="0 0 0" pos2="0 0 0" delay="0"></effect>
+            <effect id="quadFADE" type="fade" groupid="group" col1="1 0.101961 0.113725 1" col2="0.388235 1 0.129412 1" delay="5"></effect>
+            <effect id="quadaNegro" type="fade" groupid="group" col1="0 0 0 1" col2="0 0 0 1" delay="0.1"></effect>
+            <effect id="staticc3" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/static.mov" facesid="c3" texturetype="VIDEO_TEXTURE"></effect>
+			<effect id="Green2" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/green.mov" facesid="c2" texturetype="VIDEO_TEXTURE"></effect>
+			<effect id="FIRE3" type="object3dtexture" objid="cubos" texturename="C:/ADRIANA/Proyecto/SVN_Proyecto/src/project/vmt/bin/data/videos/fire.mov" facesid="c3" texturetype="VIDEO_TEXTURE"></effect>
+        </effects>
+    </scene>
+    <timedevents>
+        <timedevent t="0" effect="gusanoc1"></timedevent>
+        <timedevent t="0.001" effect="gusanoc2"></timedevent>
+        <timedevent t="0.002" effect="gusanoc3"></timedevent>
+        <timedevent t="8.001" effect="CilindroScan"></timedevent>
+		<timedevent t="15.002" effect="quadFADE"></timedevent>		
+        <timedevent t="20" effect="grid1"></timedevent>
+        <timedevent t="20.001" effect="grid2"></timedevent>
+        <timedevent t="20.002" effect="staticc3"></timedevent>
+
+        <timedevent t="39" effect="NegroC1"></timedevent>
+        <timedevent t="39.001" effect="NegroC2"></timedevent>
+        <timedevent t="39.002" effect="NegroC3"></timedevent>
+        <timedevent t="39.003" effect="NegroCilindro"></timedevent>
+        <timedevent t="39.004" effect="quadaNegro"></timedevent>		
+
+        <timedevent t="55" effect="staticc3"></timedevent>
+        <timedevent t="55.001" effect="particlec1"></timedevent>
+        <timedevent t="55.002" effect="checkerc2"></timedevent>
+        <timedevent t="55.003" effect="FireCilindro"></timedevent>		
+		
+        <timedevent t="68" effect="NegroCilindro"></timedevent>
+        <timedevent t="69" effect="NegroC1"></timedevent>
+        <timedevent t="69.001" effect="NegroC2"></timedevent>
+        <timedevent t="69.002" effect="NegroC3"></timedevent>
+		
+	    <timedevent t="71" effect="FIRE3"></timedevent>	
+	    <timedevent t="71.001" effect="Space1"></timedevent>	
+	    <timedevent t="71.002" effect="BlueCilindro"></timedevent>	
+	    <timedevent t="71.003" effect="Green2"></timedevent>	
+			
+        <timedevent t="90" effect="NegroCilindro"></timedevent>
+        <timedevent t="90.001" effect="NegroC1"></timedevent>
+        <timedevent t="90.002" effect="NegroC2"></timedevent>
+        <timedevent t="90.003" effect="NegroC3"></timedevent>		
+    </timedevents>
+    <keyevents></keyevents>
+</vmtshow>

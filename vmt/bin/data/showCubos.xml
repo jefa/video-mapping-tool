@@ -56,7 +56,7 @@
         <timedevent t="3.2" effect="ef3"></timedevent>
     </timedevents>
     <keyevents>
-        <keyevent key="97" effect="ef1"></keyevent>
-        <keyevent key="115" effect="ef2"></keyevent>
+     <keyevent key="97" effect="ef1"></keyevent>
+     <keyevent key="115" effect="ef2"></keyevent>
     </keyevents>
 </vmtshow>

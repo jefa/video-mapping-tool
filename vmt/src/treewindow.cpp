@@ -116,7 +116,7 @@ void TreeWindow::insertRow()
          Name= (inputText("New")).toStdString();
          path= (inputTextPath("")).toStdString();
          int pos = model->getVmtModel()->getObjects3D().size();
-         model->addObject3D(pos, index.row()+1, index, Name, path);
+         model->addObject3D(/*pos*/0, index.row()+1, index, Name, path);
      } else {
          Name = (inputText("New")).toStdString();
          model->insertRows(0,index.row()+1, index, Name);
@@ -168,7 +168,7 @@ string TreeWindow::ObtType(const QModelIndex &index)
                 {
                 case 0:TypeNodo = "CAMERAS";		 break;
                 case 1:TypeNodo = "OBJECTS";		 break;
-                case 2:TypeNodo = "LIGHTS";		     break;
+                case 2:TypeNodo = "GROUPS";		     break;
                 case 3:TypeNodo = "NODES";		     break;
                 case 4:TypeNodo = "BACKGRAUND";		 break;
 
@@ -183,7 +183,7 @@ string TreeWindow::ObtType(const QModelIndex &index)
                 case 1:TypeNodo = "LAYER";		 break;
                 case 2:TypeNodo = "QUAD";		 break;
                 case 3:TypeNodo = "OBJECT";		 break;
-                case 4:TypeNodo = "LIGHT";		 break;
+                case 4:TypeNodo = "GROUPS";		 break;
                 case 5:TypeNodo = "NODE";		 break;
 
                 }
@@ -231,7 +231,7 @@ string TypeNodo;
             insertRowAction->setEnabled(false);
             removeRowAction->setEnabled(false);
         }
-        if (TypeNodo == "LIGHTS" )
+        if (TypeNodo == "GROUPS" )
         {
             editObjectAction->setEnabled(false);
             insertRowAction->setEnabled(true);

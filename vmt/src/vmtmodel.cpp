@@ -717,7 +717,7 @@ void VmtModel::loadShow(string filepath) {
             showXML.popTag();//camera
         }
     showXML.popTag();//cameras
-
+/*
     showXML.pushTag("lights");
     for(int lightI = 0; lightI < showXML.getNumTags("light"); lightI++) {
         string lightId = showXML.getAttribute("light", "id", "", lightI);
@@ -730,7 +730,7 @@ void VmtModel::loadShow(string filepath) {
         this->setLightDirectional(lightId, diffuseVec.x, diffuseVec.y, diffuseVec.z, directionVec.x, directionVec.y, directionVec.z);
     }
     showXML.popTag();//lights
-
+*/
     showXML.pushTag("groups");
     for(int groupI = 0; groupI < showXML.getNumTags("group"); groupI++) {
         string groupId = showXML.getAttribute("group", "id", "", groupI);

@@ -7,6 +7,7 @@
 #include "ofxCamera.h"
 #include "ofxLight.h"
 #include "OscManager.h"
+#include "QuadGroup.h"
 
 
 #include <QList>
@@ -146,6 +147,20 @@ class NodeItemData : public TreeItemData {
 
     private:
     Node *node;
+
+};
+class GroupItemData : public TreeItemData {
+
+    public:
+    GroupItemData(QuadGroup *groupobj);
+    ~GroupItemData();
+
+    QVariant getData(int column);
+    void setData(int column, QVariant colValue);
+    bool setSeleted(Scene *scene);
+
+    private:
+    QuadGroup *group;
 
 };
 
